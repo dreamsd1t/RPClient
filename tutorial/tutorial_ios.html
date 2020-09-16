@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.css">
+    <script>
+    /* 퀵메뉴 창닫기 기능 */
+    function WinClose()
+     {
+       window.open('','_self').close();
+    }
+    </script>
+    <!-- Demo styles -->
+<style>
+html, body {position: relative;height: 100%;}
+body {  background: #4c4c4c;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color:#000;margin: 0;  padding: 0;}
+.swiper-container {  width: 100%;height: 100%;}
+.swiper-slide {
+      position: relative;
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-pagination-bullet {width: 20px;height: 20px;text-align: center;line-height: 20px;font-size: 12px;color:#000;  opacity: 1;background: rgba(0,0,0,0.2);}
+    .swiper-pagination-bullet-active {color:#fff;background: #007aff;}
+
+    .btn_close{position: absolute; right:20px; top:20px; z-index: 99999;}
+    .btn_close img{width:20px;}
+    .btn_close02{position: absolute;  margin-left:auto; margin-right:auto; left:0; right:0;  bottom:30px; z-index: 99999;}
+    .btn_close02 img{width:200px;}
+
+</style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url(images/tutorial01.png) no-repeat center top; background-size: contain;"></div>
+            <div class="swiper-slide" style="background: url(images/tutorial02_ios.png) no-repeat center top; background-size: contain;"></div>
+            <div class="swiper-slide" style="background: url(images/tutorial03.png) no-repeat center top; background-size: contain;"></div>
+            <div class="swiper-slide" style="background: url(images/tutorial04.png) no-repeat center top; background-size: contain;"></div>
+            <div class="swiper-slide" style="background: url(images/tutorial05.png) no-repeat center top; background-size: contain;"></div>
+            <div class="swiper-slide" style="background: url(images/tutorial06.png) no-repeat center top; background-size: contain;"></div>
+            <div class="swiper-slide" style="background: url(images/tutorial07.png) no-repeat center top; background-size: contain;"></div>
+            <div class="swiper-slide" style="background: url(images/tutorial08.png) no-repeat center top; background-size: contain;">
+
+              <div class="btn_close"><a href="javascript:WinClose();"><img src="images/btn_close.png" alt="닫기"></a></div>
+              <div class="btn_close02"><a href="javascript:WinClose();"><img src="images/btn_close02.png" alt="닫기"></a></div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        paginationBulletRender: function (swiper, index, className) {
+            return '<span class="' + className + '">' + '</span>';
+        }
+    });
+    </script>
+</body>
+</html>
