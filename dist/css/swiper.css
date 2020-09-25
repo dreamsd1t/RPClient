@@ -193,14 +193,16 @@
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  top: 20px;
+  position: absolute;
+  top: 10px;
   left: 0;
   width: 100%;
+  z-index: 12;
 }
 /* Bullets */
 .swiper-pagination-bullet {
-  width:14px!important;
-  height: 14px!important;
+  width:12px!important;
+  height: 12px!important;
   display: inline-block;
   border-radius: 100%;
   background: #000;
